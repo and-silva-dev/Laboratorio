@@ -8,6 +8,7 @@ public abstract class Exame {
     String nomePaciente;
     String tipoSanguineo;
     int idade;
+    String sexo;
 
     public Exame(String nomePaciente, String tipoSanguineo, int idade) {
         this.nomePaciente = nomePaciente;
@@ -25,7 +26,6 @@ public abstract class Exame {
     idade = anoAtual - id;
 }
      */
-
     public abstract void cadastrarExame();
 
     public abstract void classificarResultado();

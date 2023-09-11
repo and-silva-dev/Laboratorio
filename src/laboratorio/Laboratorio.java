@@ -9,8 +9,11 @@ public class Laboratorio {
    
     Colesterol colesterol = new Colesterol();
     colesterol.cadastrarExame();
-    colesterol.mostrarResultado();
+    colesterol.classificarResultado();
     
+    Triglicerideos triglicerideos = new Triglicerideos();
+    triglicerideos.cadastrarExame();
+    triglicerideos.classificarResultado();
     
     
     }
