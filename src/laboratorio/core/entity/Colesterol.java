@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Colesterol extends Exame {
 
     Scanner teclado = new Scanner(System.in);
+    int colesterolTotal;
     int ldl;
     int hdl;
 
@@ -16,13 +17,19 @@ public class Colesterol extends Exame {
     public void cadastrarExame() {
         System.out.println("Informe o nome do paciente : ");
         nomePaciente = teclado.nextLine();
+        System.out.println("Informe o ano de nascimento do paciente(dd/MM/yyyy): ");
+        String id = teclado.nextLine();
+        calcularIdade(id);
         System.out.println("Informe o tipo sanguíneo do paciente: ");
         tipoSanguineo = teclado.nextLine();
+        System.out.println("Informe o valor do colesterol Total: ");
+        colesterolTotal = teclado.nextInt();
         System.out.println("Informe o valor do colesterol LDL: ");
         ldl = teclado.nextInt();
+        teclado.nextLine();
         System.out.println("Informe o valor do colesterol HDL: ");
         hdl = teclado.nextInt();
-   
+
     }
 
     @Override
@@ -32,9 +39,7 @@ public class Colesterol extends Exame {
 
     @Override
     public void mostrarResultado() {
-
-        
-        
+        System.out.println("Idade do paciente : " + idade);
     }
 
 }

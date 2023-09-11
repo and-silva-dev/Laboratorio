@@ -1,8 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package laboratorio.core.entity;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public abstract class Exame {
 
@@ -20,9 +19,13 @@ public abstract class Exame {
 
     }
 
-    public void idade(int id){
-        idade  = 2023 - id ;
-    }
+    /*
+    public void idade(int id) {
+    int anoAtual = LocalDate.now().getYear();
+    idade = anoAtual - id;
+}
+     */
+
     public abstract void cadastrarExame();
 
     public abstract void classificarResultado();
@@ -53,6 +56,20 @@ public abstract class Exame {
         this.idade = idade;
     }
 
-    
+    public void calcularIdade(String dataNascimentoStr) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate dataNascimento = LocalDate.parse(dataNascimentoStr, formatter);
+        LocalDate dataAtual = LocalDate.now();
 
+        int idade = dataAtual.getYear() - dataNascimento.getYear();
+
+        // Verifica se a data de aniversário já ocorreu este ano
+        if (dataNascimento.getDayOfYear() > dataAtual.getDayOfYear()) {
+            idade--;
+            System.out.println(idade + " anos");
+        } else {
+
+            System.out.println(idade + " anos");
+        }
+    }
 }
