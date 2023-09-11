@@ -1,13 +1,31 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package laboratorio.core.entity;
 
-/**
- *
- * @author Anderson
- */
-public class Glicemia {
-    
+import java.util.Scanner;
+
+public class Glicemia extends Exame {
+
+    int quantidadeGlicose;
+
+    Scanner teclado = new Scanner(System.in);
+
+    @Override
+    public void cadastrarExame() {
+        System.out.println("Informe o nome do paciente : ");
+        nomePaciente = teclado.nextLine();
+        System.out.println("Informe o tipo sanguíneo do paciente: ");
+        tipoSanguineo = teclado.nextLine();
+        System.out.println("Informe a quantidade de glicose: ");
+        quantidadeGlicose = teclado.nextInt();
+    }
+
+    @Override
+    public void classificarResultado() {
+
+    }
+
+    @Override
+    public void mostrarResultado() {
+
+    }
+
 }

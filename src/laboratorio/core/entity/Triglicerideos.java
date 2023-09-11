@@ -1,13 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package laboratorio.core.entity;
 
-/**
- *
- * @author Anderson
- */
-public class Triglicerideos {
+public class Triglicerideos extends Exame {
+
+    int triglicerideos;
+
+   
     
+    
+    
+    public void cadastrar() {
+
+    }
+
+    @Override
+    public void classificarResultado() {
+
+    }
+
+    @Override
+    public void mostrarResultado() {
+
+    }
+
+    @Override
+    public void cadastrarExame() {
+    }
+
 }

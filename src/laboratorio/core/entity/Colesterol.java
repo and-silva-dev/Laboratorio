@@ -4,10 +4,37 @@
  */
 package laboratorio.core.entity;
 
-/**
- *
- * @author Anderson
- */
-public class Colesterol {
-    
+import java.util.Scanner;
+
+public class Colesterol extends Exame {
+
+    Scanner teclado = new Scanner(System.in);
+    int ldl;
+    int hdl;
+
+    @Override
+    public void cadastrarExame() {
+        System.out.println("Informe o nome do paciente : ");
+        nomePaciente = teclado.nextLine();
+        System.out.println("Informe o tipo sanguíneo do paciente: ");
+        tipoSanguineo = teclado.nextLine();
+        System.out.println("Informe o valor do colesterol LDL: ");
+        ldl = teclado.nextInt();
+        System.out.println("Informe o valor do colesterol HDL: ");
+        hdl = teclado.nextInt();
+   
+    }
+
+    @Override
+    public void classificarResultado() {
+
+    }
+
+    @Override
+    public void mostrarResultado() {
+
+        
+        
+    }
+
 }
