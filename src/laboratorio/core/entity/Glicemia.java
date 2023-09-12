@@ -4,16 +4,18 @@ import java.util.Scanner;
 
 public class Glicemia extends Exame {
 
-    int quantidadeGlicose;
-
     Scanner teclado = new Scanner(System.in);
 
+//Atributos
+   private int quantidadeGlicose;
+
+//Metodos sobrescritos classe Exame
     @Override
     public void cadastrarExame() {
         System.out.println("-----------Glicemia-----------");
         System.out.println("Informe o nome do paciente : ");
         nomePaciente = teclado.nextLine();
-        System.out.println("Informe o sexo do paciente H/M" );
+        System.out.println("Informe o sexo do paciente H/M");
         sexo = teclado.nextLine();
         System.out.println("Informe o ano de nascimento do paciente(dd/MM/yyyy): ");
         String id = teclado.nextLine();

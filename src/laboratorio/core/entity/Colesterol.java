@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class Colesterol extends Exame {
 
     Scanner teclado = new Scanner(System.in);
-    int colesterolTotal;
-    int ldl;
-    int hdl;
 
+// Atributos
+    private int colesterolTotal;
+    private int ldl;
+    private int hdl;
+
+//Metodos sobrescritos classe Exame
     @Override
     public void cadastrarExame() {
         System.out.println("-----------Colesterol-----------");

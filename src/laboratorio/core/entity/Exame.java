@@ -9,6 +9,7 @@ public abstract class Exame {
     String tipoSanguineo;
     int idade;
     String sexo;
+//Constutores
 
     public Exame(String nomePaciente, String tipoSanguineo, int idade) {
         this.nomePaciente = nomePaciente;
@@ -26,12 +27,14 @@ public abstract class Exame {
     idade = anoAtual - id;
 }
      */
+    //Metodos abstratos
     public abstract void cadastrarExame();
 
     public abstract void classificarResultado();
 
     public abstract void mostrarResultado();
 
+    //Metodos Get e Set
     public String getNomePaciente() {
         return nomePaciente;
     }
@@ -55,6 +58,7 @@ public abstract class Exame {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+//Metodo criado para calcular idade com data local
 
     public void calcularIdade(String dataNascimentoStr) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
