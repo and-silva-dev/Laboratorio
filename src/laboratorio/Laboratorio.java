@@ -16,6 +16,10 @@ public class Laboratorio {
         Triglicerideos triglicerideos = new Triglicerideos();
         triglicerideos.cadastrarExame();
         triglicerideos.classificarResultado();
+        
+        Glicemia glicemia = new Glicemia();
+        glicemia.cadastrarExame();
+        glicemia.classificarResultado();
 
     }
 
